@@ -11,6 +11,7 @@ import java.util.Map;
 public class Test {
     @org.junit.jupiter.api.Test
     public void messageSenderImplRuTest() {
+        System.out.println("Тест: доставка сообщения в Россию");
         GeoServiceImpl geoService = Mockito.mock(GeoServiceImpl.class);
         Mockito.when(geoService.byIp(GeoServiceImpl.MOSCOW_IP)).thenReturn(new Location("Moscow", Country.RUSSIA, "Lenina", 15));
 
@@ -26,6 +27,7 @@ public class Test {
 
     @org.junit.jupiter.api.Test
     public void messageSenderImplEnTest() {
+        System.out.println("Тест: доставка сообщения в США");
         GeoServiceImpl geoService = Mockito.mock(GeoServiceImpl.class);
         Mockito.when(geoService.byIp(GeoServiceImpl.NEW_YORK_IP)).thenReturn(new Location("New York", Country.USA, " 10th Avenue", 32));
 
